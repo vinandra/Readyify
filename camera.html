@@ -7,18 +7,18 @@
   </head>
   <body>
     <a-scene
-      mindar-image="imageTargetSrc: ./target/multitarget.mind;"
+      mindar-image="imageTargetSrc: ./target/targets.mind;"
       color-space="sRGB"
       renderer="colorManagement: true, physicallyCorrectLights"
       vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false"
     >
       <a-assets>
-        <a-asset-item id="pom" src="./assets/models/pom.gltf"></a-asset-item>
-        <a-asset-item
-          id="atomic"
-          src="./assets/models/atomic.gltf"
-        ></a-asset-item>
+        <a-asset-item id="pom" src="./assets/models/3dpom.gltf"></a-asset-item>
+        <a-asset-item id="daak" src="./assets/models/3daak.gltf"></a-asset-item>
+        <a-asset-item id="dah" src="./assets/models/3dah.gltf"></a-asset-item>
+        <a-asset-item id="sfm" src="./assets/models/3dmsfm.gltf"></a-asset-item>
+        <a-asset-item id="shm" src="./assets/models/3dshm.gltf"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -28,7 +28,7 @@
         <a-gltf-model
           src="#pom"
           position="0 -0.25 0"
-          scale="0.5 0.5 0.5"
+          scale="1 1 1"
           rotation="180 90 90"
           animation-mixer
         >
@@ -38,9 +38,45 @@
       <!-- Target 1 -->
       <a-entity mindar-image-target="targetIndex: 1">
         <a-gltf-model
-          src="#atomic"
+          src="#daak"
           position="0 -0.25 0"
-          scale="0.5 0.5 0.5"
+          scale="1 1 1"
+          rotation="180 90 90"
+          animation-mixer
+        >
+        </a-gltf-model>
+      </a-entity>
+
+      <!-- target 2 -->
+      <a-entity mindar-image-target="targetIndex: 2">
+        <a-gltf-model
+          src="#dah"
+          position="0 -0.25 0"
+          scale="1 1 1"
+          rotation="180 90 90"
+          animation-mixer
+        >
+        </a-gltf-model>
+      </a-entity>
+
+      <!-- target 3 -->
+      <a-entity mindar-image-target="targetIndex: 3">
+        <a-gltf-model
+          src="#sfm"
+          position="0 -0.25 0"
+          scale="1 1 1"
+          rotation="180 90 90"
+          animation-mixer
+        >
+        </a-gltf-model>
+      </a-entity>
+
+      <!-- target 4 -->
+      <a-entity mindar-image-target="targetIndex: 4">
+        <a-gltf-model
+          src="#shm"
+          position="0 -0.25 0"
+          scale="1 1 1"
           rotation="180 90 90"
           animation-mixer
         >
